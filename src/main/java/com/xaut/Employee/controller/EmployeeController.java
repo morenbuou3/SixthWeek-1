@@ -29,4 +29,9 @@ public class EmployeeController {
     public void updateEmployees(@RequestBody Employee e) {
         employeeService.updateEmployees(e);
     }
+
+    @RequestMapping(method = RequestMethod.DELETE)
+    public void deleteEmployees(@RequestBody Employee e) {
+        employeeService.deleteEmployees(e);
+    }
 }

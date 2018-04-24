@@ -30,4 +30,11 @@ public class EmployeeRepoImpl implements EmployeeRepo {
             Cache.getCache().add(e);
         }
     }
+
+    @Override
+    public void deleteEmployees(Employee e) {
+        if (Cache.getCache().stream().anyMatch(n -> n.getId() == e.getId())) {
+            Cache.getCache().removeIf(n -> n.equals(e));
+        }
+    }
 }

@@ -28,4 +28,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     public void updateEmployees(Employee e) {
         employeeRepo.updateEmployees(e);
     }
+
+    @Override
+    public void deleteEmployees(Employee e) {
+        employeeRepo.deleteEmployees(e);
+    }
 }
