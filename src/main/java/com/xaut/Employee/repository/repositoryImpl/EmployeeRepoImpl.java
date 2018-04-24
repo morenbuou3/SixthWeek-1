@@ -14,4 +14,9 @@ public class EmployeeRepoImpl implements EmployeeRepo {
     public List<Employee> getEmployees() {
         return Cache.getCache();
     }
+
+    @Override
+    public void addEmployees(Employee e) {
+        Cache.getCache().add(e);
+    }
 }

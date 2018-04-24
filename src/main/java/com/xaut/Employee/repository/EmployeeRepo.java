@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface EmployeeRepo {
     List<Employee> getEmployees();
+
+    void addEmployees(Employee e);
 }

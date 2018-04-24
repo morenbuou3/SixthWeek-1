@@ -3,10 +3,7 @@ package com.xaut.Employee.controller;
 import com.xaut.Employee.entity.Employee;
 import com.xaut.Employee.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,5 +18,10 @@ public class EmployeeController {
     @ResponseBody
     public List<Employee> getEmployees() {
         return employeeService.getEmployees();
+    }
+
+    @RequestMapping(method = RequestMethod.POST)
+    public void createEmployees(@RequestBody Employee e) {
+        employeeService.addEmployees(e);
     }
 }
