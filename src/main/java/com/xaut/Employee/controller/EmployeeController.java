@@ -24,4 +24,9 @@ public class EmployeeController {
     public void createEmployees(@RequestBody Employee e) {
         employeeService.addEmployees(e);
     }
+
+    @RequestMapping(method = RequestMethod.PUT)
+    public void updateEmployees(@RequestBody Employee e) {
+        employeeService.updateEmployees(e);
+    }
 }

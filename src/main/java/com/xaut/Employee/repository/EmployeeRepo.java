@@ -8,4 +8,6 @@ public interface EmployeeRepo {
     List<Employee> getEmployees();
 
     void addEmployees(Employee e);
+
+    void updateEmployees(Employee e);
 }

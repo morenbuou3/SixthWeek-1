@@ -23,4 +23,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     public void addEmployees(Employee e) {
         employeeRepo.addEmployees(e);
     }
+
+    @Override
+    public void updateEmployees(Employee e) {
+        employeeRepo.updateEmployees(e);
+    }
 }

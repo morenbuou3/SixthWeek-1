@@ -17,6 +17,17 @@ public class EmployeeRepoImpl implements EmployeeRepo {
 
     @Override
     public void addEmployees(Employee e) {
+        if (Cache.getCache().stream().anyMatch(n -> n.getId() == e.getId())) {
+            return;
+        }
         Cache.getCache().add(e);
+    }
+
+    @Override
+    public void updateEmployees(Employee e) {
+        if (Cache.getCache().stream().anyMatch(n -> n.getId() == e.getId())) {
+            Cache.getCache().removeIf(n -> n.getId() == e.getId());
+            Cache.getCache().add(e);
+        }
     }
 }
