@@ -38,8 +38,8 @@ public class Employee {
         this.age = age;
     }
 
-    public Gender getGender() {
-        return gender;
+    public String getGender() {
+        return gender.getGender();
     }
 
     public void setGender(Gender gender) {
